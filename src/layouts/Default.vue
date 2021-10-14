@@ -23,20 +23,14 @@ export default {
       showSidebar: false,
     }
   },
-  props: ['pages'],
-
   components: {
+
     Header,
     Footer,
     Sidebar,
-  },
-  mounted () {
-    if (!this.$route.path.includes(this.$context.locale)) {
-      this.$router.push({
-          path: this.$tp(this.$route.path, this.$context.locale, true)
-      })
-    }
-  },
+  }
+,
+  props: ['pages'],
 }
 
 </script>
