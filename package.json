@@ -1,0 +1,25 @@
+{
+  "name": "itsnwa.com",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/remark-prismjs": "0.5.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "gridsome": "^0.7.23",
+    "gridsome-plugin-i18n": "^1.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^9",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "^8.1.8",
+    "postcss-import": "^13.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
+}
