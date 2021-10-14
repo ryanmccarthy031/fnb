@@ -5,6 +5,7 @@ module.exports = {
             'es-es',
             'en-us',
         ],
+        enablePathRewrite: false,
         fallbackLocale: 'en-us',
         defaultLocale: 'en-us',
         messages: {
