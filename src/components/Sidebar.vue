@@ -8,7 +8,7 @@
             class="absolute w-screen h-screen bg-black opacity-25 top-0 left-0 cursor-pointer" />
         <div class="h-screen sticky top-0 py-4 px-8 bg-white">
             <div class="w-32 mx-16 my-8">
-                <g-link :to="$tp('/')">
+                <g-link :to="'/'">
                     <img 
                         src="../../static/logo.png"
                         :alt="settings.site_name" 
@@ -24,7 +24,7 @@
                         :key="`page-${index}`">
                         <g-link
                             class="text-xl"
-                            :to="$tp(page.node.path)">
+                            :to="page.node.path">
                             {{ page.node.title }}
                         </g-link>
                     </li>
