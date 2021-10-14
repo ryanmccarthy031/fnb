@@ -2,7 +2,7 @@
 date: 2019-06-04
 title: Solicitar
 excerpt: Si hay algo que podamos hacer por usted, puede solicitarlo aquí.
-locale: es-ES
+locale: es-es
 priority: 5
 ---
 * [Pañales](http://bit.ly/fnb_diapers)

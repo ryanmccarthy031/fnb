@@ -5,10 +5,10 @@
           v-html="settings.hero_title" />
         <h2
           class="col-span-8 col-start-3"
-          v-if="$i18n.locale.toString()==='en-US'" v-html="settings.english_subtitle" />
+          v-if="$i18n.locale.toString()==='en-us'" v-html="settings.english_subtitle" />
         <h2 
           class="col-span-8 col-start-3"
-          v-if="$i18n.locale.toString()==='es-ES'" v-html="settings.subtítulo_en_español" />
+          v-if="$i18n.locale.toString()==='es-es'" v-html="settings.subtítulo_en_español" />
     </div>
 </template>
 

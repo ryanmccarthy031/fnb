@@ -2,7 +2,7 @@
 date: 2019-06-04
 title: Requests
 excerpt: If there's something we can do for you, you can request it here.
-locale: en-US
+locale: en-us
 priority: 5
 ---
 * [Diapers](http://bit.ly/fnb_diapers)

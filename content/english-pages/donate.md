@@ -2,7 +2,7 @@
 date: 2019-05-18
 title: Donate
 excerpt: We've got several ways you can contribute.
-locale: en-US
+locale: en-us
 priority: 2
 ---
 * [Funds for General Use](https://opencollective.com/fnb_raleigh)

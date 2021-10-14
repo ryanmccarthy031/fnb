@@ -2,7 +2,7 @@
 date: 2021-09-23
 title: Projects
 excerpt: We've got several current and upcoming projects that you can get involved with.
-locale: en-US
+locale: en-us
 priority: 4
 ---
 ## Current Projects

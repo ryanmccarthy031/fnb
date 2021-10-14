@@ -24,7 +24,7 @@ fields:
   label: Locale
   description: Set the page's locale
   hidden: true
-  default: es-ES
+  default: es-es
   config:
     required: true
 - type: datetime
