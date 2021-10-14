@@ -2,7 +2,7 @@
     <header>
         <div class="flex h-40">
             <div class="w-32">
-                <g-link :to="'/'">
+                <g-link :to="$tp('/')">
                     <img 
                         src="../../static/logo.png"
                         :alt="settings.site_name" 
