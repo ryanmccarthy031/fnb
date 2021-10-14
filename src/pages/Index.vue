@@ -26,5 +26,11 @@ export default {
   components: {
     Hero,
   },
+  mounted () {
+    if (this.$route.path===`/${this.$context.locale}/`) return
+    this.$router.push({
+        path: this.$tp(this.$route.path, this.$context.locale, true)
+    })
+}
 }
 </script>
