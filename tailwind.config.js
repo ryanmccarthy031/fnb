@@ -1,7 +1,7 @@
 module.exports = {
   purge: [
     './src/components/*.vue',
-    './src/laouts/*.vue',
+    './src/layouts/*.vue',
     './src/pages/*.vue',
     './src/templates/*.vue',
     './src/**/*.vue',
