@@ -1,14 +1,8 @@
 <template>
-  <Layout :pages="pages">
-    <div class="grid grid-cols-12">
-      <div class="prose col-span-12 md:col-span-8 md:col-start-3 px-8 py-2">
-        <div>
-          <h1>{{ $page.data.title }}</h1>
-        </div>
+    <Layout :pages="pages">
+        <h1>{{ $page.data.title }}</h1>
         <PageContent :content="$page.data.content" />
-      </div>
-    </div>
-  </Layout>
+    </Layout>
 </template>
 
 <page-query>
@@ -31,21 +25,24 @@ query MainPage ($path: String!) {
 </page-query>
 
 <script>
-import PageContent from "@/components/PageContent"
+import PageContent from "@/components/PageContent";
 
 export default {
-  components: {
-    PageContent
-  },
-  computed: {
-    pages () {
-      return this.$page.pages.edges.filter(page=>page.node.locale===this.$context.locale)
+    components: {
+        PageContent
+    },
+    computed: {
+        pages() {
+            console.log(this.$i18n.locale);
+            return this.$page.pages.edges.filter(
+                edge => edge.node.locale === this.$i18n.locale
+            );
+        }
+    },
+    metaInfo() {
+        return {
+            title: this.$page.data.title
+        };
     }
-  },
-  metaInfo () {
-    return {
-      title: this.$page.data.title
-    }
-  }
-}
+};
 </script>

@@ -1,42 +1,37 @@
 <template>
-    <div class="px-16 py-6">
+    <div class="bg-transparent">
         <select
-            v-model="language"
-            class="text-xl w-full"
-            name="language" 
-            id="language">
+            v-model="locale"
+            @change="localeChanged"
+            name="locale"
+            id="locale"
+        >
             <option
                 v-for="(lang, index) in availableLocales"
                 :key="`language-${index}`"
-                :value="lang">{{ $t(lang) }}</option>
+                :value="lang"
+            >
+                {{ $t(lang) }}
+            </option>
         </select>
     </div>
 </template>
-
 
 <script>
 export default {
     data() {
         return {
-            selectedLanguage: this.$i18n.locale.toString(),
-            availableLocales: this.$i18n.availableLocales,
+            locale: this.$i18n.locale.toString(),
+            availableLocales: this.$i18n.availableLocales
+        };
+    },
+    methods: {
+        localeChanged() {
+            this.$router.push({
+                path: this.$tp(this.$route.path, this.locale, true)
+            });
+            this.$i18n.locale = this.locale;
         }
-    },
-    computed: {
-        language: {
-            get () {
-                return this.selectedLanguage
-            },
-            set (val) {
-                this.$i18n.locale = val
-                this.selectedLanguage = val
-
-                if (this.$route.path===`/${val}/`) return
-                this.$router.push({
-                    path: this.$tp(this.$route.path, val, true)
-                })
-            },
-        },
-    },
-}
+    }
+};
 </script>

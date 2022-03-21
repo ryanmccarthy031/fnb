@@ -1,9 +1,7 @@
 <template>
-  <Layout :pages="($page.pages || {}).edges">
-    <div>
-      <Hero />
-    </div>
-  </Layout>
+    <Layout :pages="($page.pages || {}).edges">
+        <Hero />
+    </Layout>
 </template>
 <page-query>
 query MainPage ($locale: String) {
@@ -20,17 +18,16 @@ query MainPage ($locale: String) {
 }
 </page-query>
 <script>
-import Hero from "@/components/Hero"
+import Hero from "@/components/Hero";
 
 export default {
-  components: {
-    Hero,
-  },
-  mounted () {
-    if (this.$route.path===`/${this.$context.locale}/`) return
-    this.$router.push({
-        path: this.$tp(this.$route.path, this.$context.locale, true)
-    })
-}
-}
+    components: {
+        Hero
+    },
+    mounted() {
+        this.$router.push({
+            path: this.$tp(this.$route.path, this.$context.locale, true)
+        });
+    }
+};
 </script>
