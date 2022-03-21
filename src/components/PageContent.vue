@@ -1,9 +1,5 @@
 <template>
-    <div>
-        <div 
-            v-html="content"
-        />
-    </div>
+    <div class="content" v-html="content" />
 </template>
 
 <script>
@@ -11,5 +7,5 @@ export default {
     props: {
         content: String
     }
-}
+};
 </script>
