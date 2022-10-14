@@ -7,7 +7,7 @@ export default function(Vue, { head }) {
     Vue.component("Layout", DefaultLayout);
     head.bodyAttrs = {
         class:
-            "text-gray-400 bg-painting bg-center bg-no-repeat bg-cover bg-fixed font-body"
+            "text-gray-300 bg-gray-900 font-body"
     };
     head.link.push({
         rel: "stylesheet",

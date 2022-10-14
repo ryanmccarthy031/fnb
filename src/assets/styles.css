@@ -9,9 +9,8 @@
     h4,
     h5,
     h6 {
-        @apply font-bold;
         @apply font-display;
-        @apply my-3;
+        @apply text-center;
     }
     h1 {
         @apply text-5xl;
@@ -28,20 +27,71 @@
     h5 {
         @apply text-xl;
     }
-    h5 {
+    h6 {
         @apply text-lg;
     }
-    li {
-        @apply ml-2;
-        @apply list-inside;
-        @apply list-disc;
-    }
     a {
-        @apply underline;
-        @apply text-blue-500;
+        @apply no-underline;
+        @apply text-blue-400;
     }
-
-    a:visited {
-        @apply text-purple-500;
+    nav a {
+        @apply text-gray-300;
+    }
+    nav a.active {
+        @apply font-bold;
+        @apply text-green-300;
+    }
+    .content li {
+        @apply m-2;
+        @apply p-2;
+        @apply flex;
+        @apply justify-center;
+        @apply flex-grow;
+        @apply list-none;
+    }
+    .content li a {
+        @apply text-center;
+        @apply flex-grow;
+    }
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .content p {
+        @apply w-full;
+        @apply p-4;
+    }
+    .content p,
+    .content li {
+        @apply bg-white;
+        @apply bg-opacity-10;
+    }
+    .content h1 {
+        @apply mt-16;
+    }
+    .content h2 {
+        @apply mt-8;
+    }
+    .content h3 {
+        @apply mt-4;
+    }
+    .content h4 {
+        @apply mt-2;
+    }
+    .content h5 {
+        @apply mt-2;
+    }
+    .content h6 {
+        @apply mt-2;
+    }
+    .content h1:first-child,
+    .content h2:first-child,
+    .content h3:first-child,
+    .content h4:first-child,
+    .content h5:first-child,
+    .content h6:first-child {
+        @apply mt-0;
     }
 }

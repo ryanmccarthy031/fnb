@@ -1,14 +1,9 @@
 <template>
-    <div class="flex flex-col h-screen">
-        <Sidebar
-            :showSidebar="showSidebar"
-            @toggleSidebar="showSidebar = !showSidebar"
-            :pages="pages"
-        />
-        <Header @toggleSidebar="showSidebar = !showSidebar" :pages="pages" />
-        <div class="flex-grow m-10 p-10 bg-white bg-opacity-20">
-            <slot />
-        </div>
+    <div class="min-h-screen flex flex-col pt-24">
+        <Header @toggleSidebar="showSidebar = !showSidebar" :pages="pages" :title="title" :locale="locale" />
+        <MobileNav :showSidebar="showSidebar" @toggleSidebar="showSidebar = !showSidebar" :pages="pages" :title="title"
+            :locale="locale" />
+        <slot />
         <Footer />
     </div>
 </template>
@@ -16,7 +11,7 @@
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Sidebar from "@/components/Sidebar";
+import MobileNav from "@/components/MobileNav";
 
 export default {
     data() {
@@ -27,8 +22,8 @@ export default {
     components: {
         Header,
         Footer,
-        Sidebar
+        MobileNav,
     },
-    props: ["pages"]
+    props: ["pages", "title", "locale"]
 };
 </script>
