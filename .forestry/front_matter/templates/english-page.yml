@@ -1,5 +1,5 @@
 ---
-label: English Pages
+label: Page
 hide_body: false
 fields:
 - type: text
@@ -18,22 +18,20 @@ fields:
   label: Menu Order
   description: Set the page's sort order
   config:
-    required: true
+    required: false
+    min: 
+    max: 
+    step: 
 - name: locale
   type: text
   label: Locale
   description: Set the page's locale
-  hidden: true
+  hidden: false
   default: en-us
   config:
     required: true
-- type: datetime
-  name: date
-  label: Date
-  config:
-    required: true
-    display_utc: true
-    date_format: YYYY-MM-DD
-    time_format: ''
-    export_format: YYYY-MM-DD
-  default: now
+- name: hide_from_navigation
+  type: boolean
+  label: Hide from navigation
+  description: Hides this page from the navigation menu
+  default: false

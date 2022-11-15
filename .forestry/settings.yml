@@ -2,25 +2,18 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/static/admin"
-webhook_url: 
+webhook_url:
 sections:
 - type: directory
-  path: content/english-pages
-  label: English Pages
-  create: documents
+  path: content
+  label: Pages
+  create: all
   match: "**/*.md"
   templates:
   - english-page
-- type: directory
-  path: content/páginas-en-español
-  label: Páginas en Español
-  create: documents
-  match: "**/*.md"
-  templates:
-  - página-en-español
 - type: document
   path: data/theme.json
-  label: Theme config
+  label: Theme
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

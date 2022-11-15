@@ -1,7 +1,8 @@
 <template>
-    <Layout :pages="pages">
-        <h1>{{ $page.data.title }}</h1>
-        <PageContent :content="$page.data.content" />
+    <Layout :pages="pages" :title="$page.data.title" :locale="$page.data.locale">
+        <div class="flex flex-grow justify-center m-10">
+            <PageContent :content="$page.data.content" />
+        </div>
     </Layout>
 </template>
 
@@ -14,12 +15,15 @@ query MainPage ($path: String!) {
             path
             title
             locale
+            hideFromNav
         }
     }
   }
   data: mainPage (path: $path) {
+    locale
     title
     content
+    path
   }
 }
 </page-query>
@@ -33,16 +37,9 @@ export default {
     },
     computed: {
         pages() {
-            console.log(this.$i18n.locale);
             return this.$page.pages.edges.filter(
-                edge => edge.node.locale === this.$i18n.locale
-            );
-        }
+                edge => !edge.node.hideFromNav && edge.node.locale === this.$page.data.locale)
+        },
     },
-    metaInfo() {
-        return {
-            title: this.$page.data.title
-        };
-    }
 };
 </script>
